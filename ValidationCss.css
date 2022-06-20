@@ -1,0 +1,21 @@
+﻿h3 {
+    font-family: 'Radio Canada', sans-serif;
+    color: #033b54;
+}
+
+body {
+    margin: auto;
+    background-color: #d8e5eb;
+}
+
+
+.btn{
+display:flex;
+text-align:center;
+margin: auto;
+border:solid;
+}
+
+
+
+

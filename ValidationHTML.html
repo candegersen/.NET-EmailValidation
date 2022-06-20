@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Bu bir başlık değildir</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="ValidationCss.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.6.0.js"></script>
+</head>
+<body>
+    <h3 class="fw-bold text-center">Haftalık bültene abone olun</h3>
+
+    <form id="formId">
+
+        <div class="container">
+            <div class="col-md-4 mx-auto">
+                <label for="validationSuccess" class="form-label text">Mail adresinizi giriniz :</label>
+                <input type="email" class="form-control" placeholder="Lütfen geçerli bir mail adresi giriniz." id="validationSuccess" required />
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="col-md-4 mx-auto">
+                <label for="validationPassword" class="form-label text">Şifrenizi giriniz :</label>
+                <input type="password" class="form-control" placeholder="Lütfen şifrenizi giriniz." id="validationPassword" required />
+            </div>
+        </div>
+        
+        <div class=mx-auto>
+        <div class="text-center">
+        <button class="btn btn-primary" id="btn-submit">
+            Onaylayınız
+        </button>
+            </div>
+        </div>
+    </form>
+
+</body>
+</html>
+<script>
+    let greetingMessage = alert("Merhaba, hoşgeldiniz.");
+
+    document.getElementById('btn-submit').onclick = function () {
+        var eMail = document.getElementById("validationSuccess").value;
+        var passWord = document.getElementById("validationPassword").value;
+        var emailandPasscode = new EmailandPasscode(eMail, passWord);
+        emailandPasscode.IsValid();
+    };
+</script>
